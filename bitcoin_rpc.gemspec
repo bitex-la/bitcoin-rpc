@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
     Uses OJ and BigDecimal to accurately deserialize amounts.
     Heavily based on some throwaway snippets found around the web.
   }
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/bitex-la/bitcoin-rpc"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
