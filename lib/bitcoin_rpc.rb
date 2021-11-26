@@ -12,7 +12,7 @@ module BitcoinRpc
     def method_missing(name, *args)
       post_body = Oj.dump({method: name, params: args, id: 'jsonrpc'}, mode: :compat)
       raw_response = http_post_request(post_body)
-      resp = Oj.load( raw_response, symbol_keys: true, bigdecimal_load: true)
+      resp = Oj.load(raw_response, symbol_keys: true, bigdecimal_load: true)
       raise JsonRpcError, resp[:error] if resp[:error]
       resp[:result]
     end
